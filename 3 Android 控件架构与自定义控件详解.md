@@ -82,3 +82,6 @@ protected void onDraw(Canvas canvas) {
 ```
 
 ***附件代码***：见 AndroidHeros-Customer-View/MyTextView 和 MyTextView2
+
+## 3.6.2 创建复合控件
+***附件代码***：见 AndroidHeros-Customer-View/TopBar
