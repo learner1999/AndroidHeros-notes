@@ -21,6 +21,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Button btnToListViewFlexible = (Button) findViewById(R.id.btn_to_flexible);
         btnToListViewFlexible.setOnClickListener(this);
+
+        Button btnToListViewHide = (Button) findViewById(R.id.btn_to_hide);
+        btnToListViewHide.setOnClickListener(this);
     }
 
     @Override
@@ -39,6 +42,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_to_flexible:
                 Intent intent3 = new Intent(this, MyListViewActivity.class);
                 startActivity(intent3);
+                break;
+
+            case R.id.btn_to_hide:
+                Intent intent4 = new Intent(this, ScrollHideListViewActivity.class);
+                startActivity(intent4);
                 break;
         }
     }

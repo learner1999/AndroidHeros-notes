@@ -29,4 +29,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="弹性 ListView"/>
+
+    <Button
+        android:id="@+id/btn_to_hide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="滑动隐藏 toolbar"/>
 </LinearLayout>

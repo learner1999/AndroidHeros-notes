@@ -128,3 +128,24 @@ protected boolean overScrollBy(int deltaX, int deltaY, int scrollX, int scrollY,
 }
 ```
 
+## 滑动显示隐藏 ListView
+```java
+// 动画部分看不懂。。。
+private void toolbarAnim(int flag) {
+    if (mAnimator != null && mAnimator.isRunning()) {
+        mAnimator.cancel();
+    }
+    if (flag == 0) {
+        mAnimator = ObjectAnimator.ofFloat(mToolbar,
+                "translationY", mToolbar.getTranslationY(), 0);
+    } else {
+        mAnimator = ObjectAnimator.ofFloat(mToolbar,
+                "translationY", mToolbar.getTranslationY(),
+                -mToolbar.getHeight());
+    }
+    mAnimator.start();
+}
+```
+
+## 动态改变 ListView 布局
+继承 BaseAdapter，在 adapter 中用一个变量 mCurrentItem 记录被点击的 item，然后在 getView 中判断 position == mCurrentItem，来返回不同的 view
